@@ -7,11 +7,21 @@ import jakarta.persistence.GenerationType
 import jakarta.persistence.Column
 
 @Entity
-class Link: BaseEntity() {
+class Link(
+    name: String,
+    content: String,
+    isActive: Boolean
+): BaseEntity() {
 
     @Id // id를 붙여야 이 필드가 pk라는 것을 알 수 있다.
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "link_id")
     var id: Long? = null  // 처음 엔터티를 생성할 때 부여되는 값
-    
+
+    var name: String = name
+
+    var content: String = content
+
+    // is_active로 알아서 매핑된다.
+    var isActive: Boolean = isActive
 }
