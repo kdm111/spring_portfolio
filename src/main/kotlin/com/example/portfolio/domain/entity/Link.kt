@@ -24,4 +24,5 @@ class Link(
 
     // is_active로 알아서 매핑된다.
     var isActive: Boolean = isActive
+
 }

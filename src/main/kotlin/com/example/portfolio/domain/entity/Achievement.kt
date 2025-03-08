@@ -11,7 +11,7 @@ import java.time.LocalDate
 class Achievement(
     title: String, 
     description: String, 
-    achivedDate: LocalDate?
+    achivedDate: LocalDate?,
     host: String,
     isActive: Boolean
 ): BaseEntity() {
