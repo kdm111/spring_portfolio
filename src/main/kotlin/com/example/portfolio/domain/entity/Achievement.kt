@@ -29,6 +29,5 @@ class Achievement(
 
     var host: String = host
     
-    var isActive: Boolean = isActive
-    
+    var isActive: Boolean = isActive 
 }
