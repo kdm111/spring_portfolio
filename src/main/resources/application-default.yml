@@ -1,0 +1,13 @@
+spring.application.name=portfolio
+spring:
+jpa:
+database: h2
+open-in-view: false
+show-sql: true
+hibernate:
+  ddl-auto: create
+properties:
+hibernate:
+format_sql: false
+# default_batch_fetch_size: 10
+datasource:
