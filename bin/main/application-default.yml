@@ -14,9 +14,4 @@ spring:
     password: 
     driver-class-name: org.h2.Driver
   hibernate:
-    # 이 문장으로 인해 실행을 시킬 때마다 새로 데이터를 생성함
     ddl-auto: create
-  h2:
-    console:
-      enabled: true
-      path: /h2-console

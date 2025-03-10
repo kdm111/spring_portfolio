@@ -1,3 +1,23 @@
 {
-    "java.compile.nullAnalysis.mode": "automatic"
+    "java.compile.nullAnalysis.mode": "automatic",
+    "java.jdt.ls.java.home": "/Library/Java/JavaVirtualMachines/zulu-23.jdk/Contents/Home",
+    "java.configuration.updateBuildConfiguration": "automatic",
+
+    // ✅ Kotlin 언어 서버 자동 완성 강화 설정
+    "[kotlin]": {
+        "editor.suggest.showWords": true,
+        "editor.suggest.showClasses": true,
+        "editor.suggest.showFunctions": true,
+        "editor.suggest.showVariables": true,
+        "editor.suggest.showSnippets": true
+    },
+
+    // ✅ Kotlin 언어 서버 자동 실행 및 문제 해결 설정
+    "kotlin.languageServer.enabled": true,
+    "kotlin.compiler.jvmTarget": "23",
+    
+    // ✅ Gradle 자동 동기화 (Kotlin 프로젝트 관련 설정 반영)
+    "java.import.gradle.enabled": true,
+    "java.import.gradle.wrapper.checksums": [],
+    "java.import.gradle.arguments": "--refresh-dependencies"
 }

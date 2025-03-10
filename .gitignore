@@ -274,3 +274,4 @@ gradle-app.setting
 *.hprof
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,kotlin,java,macos,windows,intellij,git,gradle
+settings.json
