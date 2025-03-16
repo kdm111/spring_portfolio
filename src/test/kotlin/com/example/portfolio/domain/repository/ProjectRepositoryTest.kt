@@ -10,7 +10,7 @@ import org.junit.jupiter.api.TestInstance
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest
 
-@DataJpaTest
+@DataJpaTest // jpa 관련 컴포넌트만 로드하여 테스트 수행
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class ProjectRepositoryTest(
     @Autowired val projectRepository: ProjectRepository,
@@ -35,17 +35,17 @@ class ProjectRepositoryTest(
         }
         project.addDetails(details)
 
-        val skills = skillRepository.findAll()
-        val skillsUsedInProject = skills.subList(0, n)
+        val skills = skillRepository.findAll() // List<Skill> 반환
+        val skillsUsedInProject = skills.subList(0, n) // 0부터 n까지의 리스트 반환
         for (skill in skillsUsedInProject) {
             val projectSkill = ProjectSkill(project = project, skill = skill)
             project.skills.add(projectSkill)
-        }
 
+        }
         return project
     }
 
-    @BeforeAll
+    @BeforeAll // 인스턴스 메소드 사용
     fun beforeAll() {
         println("----- 스킬 데이터 초기화 시작 -----")
         val skills = mutableListOf<Skill>()
