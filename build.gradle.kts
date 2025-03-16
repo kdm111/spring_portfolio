@@ -12,7 +12,6 @@ version = "0.0.1-SNAPSHOT"
 java {
 	toolchain {
 		languageVersion = JavaLanguageVersion.of(17)
-		vendor = JvmVendorSpec.AZUL
 	}
 }
 
@@ -35,6 +34,7 @@ dependencies {
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+	testImplementation("org.assertj:assertj-core:3.24.2")
 }
 
 kotlin {

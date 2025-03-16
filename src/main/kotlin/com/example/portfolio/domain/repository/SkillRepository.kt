@@ -8,6 +8,7 @@ import java.util.Optional
 
 // jpa에서 인터페이스만 보고도 알아서 레포지토리를 만들어준다.
 interface SkillRepository:JpaRepository<Skill, Long> {
+
     fun findAllByIsActive(isActive: Boolean): List<Skill>
 
 

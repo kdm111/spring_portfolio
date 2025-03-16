@@ -23,6 +23,7 @@ class Link(
     var content: String = content
 
     // is_active로 알아서 매핑된다.
+    @Column(name = "is_active")
     var isActive: Boolean = isActive
 
 }
