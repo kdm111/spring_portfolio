@@ -37,7 +37,7 @@ class DataInitializer(
                 title = "2022 catkao 해커톤 우수상",
                 description = "desc",
                 host = "katcao",
-                achivedDate = LocalDate.now(), // LocalDate.of(2022, 1, 1)
+                achievedDate = LocalDate.now(), // LocalDate.of(2022, 1, 1)
                 isActive = true
 
             ),
@@ -45,7 +45,7 @@ class DataInitializer(
                 title = "2023 catkao 해커톤 우수상",
                 description = "desc",
                 host = "katcao",
-                achivedDate = LocalDate.now(), // LocalDate.of(2022, 1, 1)
+                achievedDate = LocalDate.now(), // LocalDate.of(2022, 1, 1)
                 isActive = true
             )
         )
