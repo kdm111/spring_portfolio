@@ -24,7 +24,9 @@ class DataInitializer(
     private val linkRepository: LinkRepository,
     private val skillRepository: SkillRepository,
     private val projectRepository: ProjectRepository,
-    private val experienceRepository: ExperienceRepository
+    private val experienceRepository: ExperienceRepository,
+
+    private val articleRepository: ArticleRepository
 ) {
     @PostConstruct // 필요로 하는 빈은 사전에 초기화 되어 있고 빈을 사용하여 데이터 초기화를 진행
     fun initializeData() {
@@ -170,5 +172,14 @@ class DataInitializer(
             )
         )
         projectRepository.saveAll(mutableListOf<Project>(project1, project2))
+
+
+        //
+        var articles = mutableListOf<Article>()
+        for (i in 1..10) {
+            var article = Article(title = "${i}", content = "${i}")
+            articles.add(article)
+        }
+        articleRepository.saveAll(articles)
     }
 }

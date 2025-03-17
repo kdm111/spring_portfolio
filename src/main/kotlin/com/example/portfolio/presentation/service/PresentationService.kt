@@ -45,4 +45,10 @@ class PresentationService(
         return projects.map { ProjectDTO(it) }
     }
 
+    @Transactional(readOnly = true)
+    fun getArticles(): List<ArticleDTO> {
+        val articles = presentationRepository.getArticles()
+        return articles.map { ArticleDTO(it) }
+    }
+
 }

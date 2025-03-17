@@ -3,6 +3,7 @@ package com.example.portfolio.presentation.repository
 import com.example.portfolio.domain.entity.*
 import com.example.portfolio.domain.repository.*
 import org.springframework.stereotype.Repository
+import java.security.PrivateKey
 
 @Repository
 class PresentationRepository(
@@ -11,7 +12,9 @@ class PresentationRepository(
     private val linkRepository: LinkRepository,
     private val skillRepository: SkillRepository,
     private val projectRepository: ProjectRepository,
-    private val experienceRepository: ExperienceRepository
+    private val experienceRepository: ExperienceRepository,
+
+    private val articleRepository: ArticleRepository
 ) {
     fun getActiveAchivements(): List<Achievement> {
         return achievementRepository.findAllByIsActive(true)
@@ -34,4 +37,7 @@ class PresentationRepository(
         return skillRepository.findAllByIsActive(true)
     }
 
+    fun getArticles(): List<Article> {
+        return articleRepository.findAll()
+    }
 }

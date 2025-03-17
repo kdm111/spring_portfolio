@@ -1,9 +1,6 @@
 package com.example.portfolio.presentation.controller
 
-import com.example.portfolio.presentation.dto.IntroductionDTO
-import com.example.portfolio.presentation.dto.LinkDTO
-import com.example.portfolio.presentation.dto.ProjectDTO
-import com.example.portfolio.presentation.dto.ResumeDTO
+import com.example.portfolio.presentation.dto.*
 import com.example.portfolio.presentation.service.PresentationService
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
@@ -45,4 +42,9 @@ class PresentationApiController(
         return presentationService.getProjects()
     }
 
+
+    @GetMapping("/v1/articles")
+    fun getArticles(): List<ArticleDTO> {
+        return presentationService.getArticles()
+    }
 }
