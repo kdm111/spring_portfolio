@@ -1,5 +1,6 @@
 package com.example.portfolio.domain.repository
 
+<<<<<<< Updated upstream
 import com.example.portfolio.domain.constant.SkillType
 import com.example.portfolio.domain.entity.*
 import org.assertj.core.api.Assertions
@@ -106,4 +107,7 @@ class ProjectRepositoryTest(
         }
         println("----- findAllByIsActive 테스트 종료 -----")
     }
+=======
+class ProjectRepositoryTest {
+>>>>>>> Stashed changes
 }

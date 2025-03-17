@@ -1,5 +1,6 @@
 package com.example.portfolio.domain.repository
 
+<<<<<<< Updated upstream
 import com.example.portfolio.domain.entity.Experience
 import com.example.portfolio.domain.entity.ExperienceDetail
 import org.assertj.core.api.Assertions
@@ -85,4 +86,13 @@ class ExperienceRepositoryTest(
         }
         println("---- findAl작ByIsActive 테스트 종료 ----")
     }
+=======
+import org.junit.jupiter.api.TestInstance
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest
+
+// 테스트는 독립적인 시행으로 독립적인 결과를 항상 내야 한다.
+@DataJpaTest
+@TestInstance(TestInstance.Lifecycle)
+class ExperienceRepositoryTest {
+>>>>>>> Stashed changes
 }
