@@ -7,7 +7,7 @@ spring:
   properties:
     hibernate:
       format_sql: false
-      # default_batch_fetch_size: 10
+      default_batch_fetch_size: 2
   datasource:
     url: jdbc:h2:mem:portfolio;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
     username: sa

@@ -1,6 +1,5 @@
 package com.example.portfolio.domain.repository
 
-<<<<<<< Updated upstream
 import com.example.portfolio.domain.entity.Experience
 import com.example.portfolio.domain.entity.ExperienceDetail
 import org.assertj.core.api.Assertions
@@ -21,7 +20,7 @@ class ExperienceRepositoryTest(
     val DATA_SIZE = 10
 
     // dummy entity를 만드는 private 메소드
-    private fun createExperience(n : Int) : Experience {
+    private fun createExperience(n: Int): Experience {
         val experience = Experience(
             title = "${n}",
             description = "테스트 설명",
@@ -41,7 +40,6 @@ class ExperienceRepositoryTest(
         return experience
     }
 
-
     @BeforeAll // 테스트 데이터 초기화
     fun beforeAll() {
         println("---- 데이터 초기화 이전 조회 시작 ----")
@@ -58,10 +56,11 @@ class ExperienceRepositoryTest(
         experienceRepository.saveAll(experiences)
         println("---- 테스트 데이터 초기화 종료 ----")
     }
+
     @Test
     fun testFindAll() {
         println("---- findAll 테스트 시작 ----")
-        val experiences  = experienceRepository.findAll()
+        val experiences = experienceRepository.findAll()
         assertThat(experiences).hasSize(DATA_SIZE)
         println("expereinces.size : ${experiences.size}")
 
@@ -76,7 +75,7 @@ class ExperienceRepositoryTest(
     @Test
     fun testFindAllByIsActive() {
         println("---- findAllByIsActive 테스트 시작 ----")
-        val experiences  = experienceRepository.findAllByIsActive(true) // 테스트 실패 검증
+        val experiences = experienceRepository.findAllByIsActive(true) // 테스트 실패 검증
         assertThat(experiences).hasSize(DATA_SIZE)
         println("expereinces.size : ${experiences.size}")
 
@@ -86,13 +85,6 @@ class ExperienceRepositoryTest(
         }
         println("---- findAl작ByIsActive 테스트 종료 ----")
     }
-=======
-import org.junit.jupiter.api.TestInstance
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest
 
-// 테스트는 독립적인 시행으로 독립적인 결과를 항상 내야 한다.
-@DataJpaTest
-@TestInstance(TestInstance.Lifecycle)
-class ExperienceRepositoryTest {
->>>>>>> Stashed changes
+
 }

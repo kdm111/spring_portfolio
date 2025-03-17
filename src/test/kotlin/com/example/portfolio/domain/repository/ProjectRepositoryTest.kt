@@ -1,6 +1,5 @@
 package com.example.portfolio.domain.repository
 
-<<<<<<< Updated upstream
 import com.example.portfolio.domain.constant.SkillType
 import com.example.portfolio.domain.entity.*
 import org.assertj.core.api.Assertions
@@ -94,7 +93,7 @@ class ProjectRepositoryTest(
     @Test
     fun testFindAllByIsActive() {
         println("----- findAllByIsActive 테스트 시작 -----")
-        val projects = projectRepository.findAllByisActive(true)
+        val projects = projectRepository.findAllByIsActive(true)
         assertThat(projects).hasSize(DATA_SIZE)
         println("projects.size: ${projects.size}")
 
@@ -107,7 +106,4 @@ class ProjectRepositoryTest(
         }
         println("----- findAllByIsActive 테스트 종료 -----")
     }
-=======
-class ProjectRepositoryTest {
->>>>>>> Stashed changes
 }
